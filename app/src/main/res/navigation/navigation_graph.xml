@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/requestFragment">
+
+    <fragment
+        android:id="@+id/requestFragment"
+        android:name="org.me.navigation.ask.RequestFragment"
+        android:label="request_fragment"
+        tools:layout="@layout/request_fragment">
+        <action
+            android:id="@+id/action_goFrom_requestFragment_to_responseFragment"
+            app:destination="@id/responseFragment" />
+
+        <argument
+            android:name="responseValue"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/responseFragment"
+        android:name="org.me.navigation.say.ResponseFragment"
+        android:label="response_fragment"
+        tools:layout="@layout/response_fragment">
+        <action
+            android:id="@+id/action_resultFrom_responseFragment_to_requestFragment"
+            app:destination="@id/requestFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/responseFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

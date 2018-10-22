@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Navigation</string>
+    <string name="title_activity">Navigation</string>
+    <string name="make_request">Request</string>
+    <string name="send_response">Respond</string>
+    <string name="request_explanation">This is the fragment that makes the request and receives the result</string>
+    <string name="response_explanation">This is the fragment that accepts the user input and returns the result</string>
+</resources>
